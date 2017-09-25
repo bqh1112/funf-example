@@ -1,0 +1,2 @@
+include ':app', ':funf-core-android'
+project(':funf-core-android').projectDir = new File('libs/funf-core-android')
