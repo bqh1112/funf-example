@@ -21,19 +21,6 @@
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
     <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
 
-    <service android:name="edu.mit.media.funf.FunfManager">
-        <meta-data android:name="default" android:value="@string/default_pipeline"/>
-    </service>
-    <receiver android:name="edu.mit.media.funf.Launcher" android:enabled="true">
-        <intent-filter>
-            <action android:name="android.intent.action.BATTERY_CHANGED" />
-            <action android:name="android.intent.action.BOOT_COMPLETED" />
-            <action android:name="android.intent.action.DOCK_EVENT" />
-            <action android:name="android.intent.action.ACTION_SCREEN_ON" />
-            <action android:name="android.intent.action.USER_PRESENT" />
-        </intent-filter>
-    </receiver>
-
     <!-- End copied -->
 
     <application
@@ -43,6 +30,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+
+
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -50,6 +39,18 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <service android:name="edu.mit.media.funf.FunfManager">
+            <meta-data android:name="default" android:value="@string/default_pipeline"/>
+        </service>
+        <receiver android:name="edu.mit.media.funf.Launcher" android:enabled="true">
+            <intent-filter>
+                <action android:name="android.intent.action.BATTERY_CHANGED" />
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.DOCK_EVENT" />
+                <action android:name="android.intent.action.ACTION_SCREEN_ON" />
+                <action android:name="android.intent.action.USER_PRESENT" />
+            </intent-filter>
+        </receiver>
     </application>
 
 </manifest>

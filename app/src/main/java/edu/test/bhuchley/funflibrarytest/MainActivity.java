@@ -119,10 +119,7 @@ public class MainActivity extends AppCompatActivity implements Probe.DataListene
 
         Log.d("xxx", "Calling bindService");
 
-        ComponentName retVal = startService(new Intent(this, FunfManager.class));
-        if (retVal == null) {
-            Log.d("xxx", "retVal = null");
-        }
+        
         // Bind to the service, to create the connection with FunfManager
         boolean result = bindService(new Intent(this, FunfManager.class), funfManagerConn, BIND_AUTO_CREATE);
         if (result) {
