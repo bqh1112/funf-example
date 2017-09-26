@@ -9,7 +9,7 @@
                      "@schedule": {"interval": 500}
          },
          "upload": {
-                       "@url": "130.215.45.27\:8000\/data",
+                       "@url": "130.215.45.27\:8000\/funf_data",
                        "@schedule": {"@interval": 60}
          },
          "data": [
